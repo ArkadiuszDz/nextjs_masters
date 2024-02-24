@@ -1,5 +1,5 @@
 import React from "react";
-import { type CoverImage } from "@/types/productListItemTypes";
+import { type CoverImage } from "@/types/productTypes";
 
 interface Props {
 	coverImage: CoverImage;

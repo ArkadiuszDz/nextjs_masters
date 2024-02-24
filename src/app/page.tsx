@@ -1,9 +1,3 @@
-import ProductList from "@/ui/organisms/ProductList";
-
-export default function Home() {
-	return (
-		<section className="mx-auto max-w-md p-12 sm:max-w-2xl">
-			<ProductList />
-		</section>
-	);
+export default function HomePage() {
+	return <section className="mx-auto max-w-md p-12 sm:max-w-2xl">Home Page</section>;
 }

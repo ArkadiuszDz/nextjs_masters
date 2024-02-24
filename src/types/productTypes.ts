@@ -7,9 +7,11 @@ export interface ProductDescription {
 	category: string;
 	name: string;
 	price: number;
+	description: string;
 }
 
 export interface Product {
+	id: string;
 	coverImage: CoverImage;
 	productDescription: ProductDescription;
 }

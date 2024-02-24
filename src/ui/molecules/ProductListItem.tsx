@@ -1,4 +1,5 @@
-import { type Product } from "@/types/productListItemTypes";
+import Link from "next/link";
+import { type Product } from "@/types/productTypes";
 import ProductCoverImage from "@/ui/atoms/ProductCoverImage";
 import ProductListItemDescription from "@/ui/atoms/ProductListItemDescription";
 
@@ -8,22 +9,26 @@ interface Props {
 
 const ProductListItem = ({
 	product: {
+		id,
 		coverImage,
-		productDescription: { category, name, price },
+		productDescription: { category, name, price, description },
 	},
 }: Props) => {
 	return (
 		<li>
-			<article>
-				<ProductCoverImage coverImage={coverImage} />
-				<ProductListItemDescription
-					productDescription={{
-						category,
-						name,
-						price,
-					}}
-				/>
-			</article>
+			<Link href={`/product/${id}`}>
+				<article>
+					<ProductCoverImage coverImage={coverImage} />
+					<ProductListItemDescription
+						productDescription={{
+							category,
+							name,
+							price,
+							description,
+						}}
+					/>
+				</article>
+			</Link>
 		</li>
 	);
 };

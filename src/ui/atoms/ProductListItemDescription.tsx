@@ -1,4 +1,4 @@
-import { type ProductDescription } from "@/types/productListItemTypes";
+import { type ProductDescription } from "@/types/productTypes";
 
 interface Props {
 	productDescription: ProductDescription;
